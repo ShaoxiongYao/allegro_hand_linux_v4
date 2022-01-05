@@ -12,29 +12,31 @@ Build and Run: "grasp"
 
 1. Download, build, and install PCAN-USB driver for Linux: libpcan
 
-tar -xzvf peak-linux-driver-x.x.tar.gz
-cd peak-linux-driver-x.x
-make NET=NO
-sudo make install
+    Note: requires install `libpopt-dev`.
+
+        tar -xzvf peak-linux-driver-x.x.tar.gz
+        cd peak-linux-driver-x.x
+        make NET=NO
+        sudo make install
 
 2. Download, build, and install PCAN-Basic API for Linux: libpcanbasic
 
-tar -xzvf PCAN_Basic_Linux-x.x.x.tar.gz
-cd PCAN_Basic_Linux-x.x.x/pcanbasic
-make
-sudo make install
+        tar -xzvf PCAN_Basic_Linux-x.x.x.tar.gz
+        cd PCAN_Basic_Linux-x.x.x/pcanbasic
+        make
+        sudo make install
 
 3. Download, build, and install Grasping Library for Linux, "libBHand": Grasping_Library_for_Linux
 
 4. Build Allegro Hand Project using cmake "out of source build" style.
 
-unzip AllegroHand.zip
-cd AllegroHand
-mkdir build
-cd build
-cmake ..
-make
-make install
+        unzip AllegroHand.zip
+        cd AllegroHand
+        mkdir build
+        cd build
+        cmake ..
+        make
+        make install
 
 Note: You will need to replace the encoder offsets and directions and the motor directions in the array at the top of the main.cpp file. These offsets can be found on the offsets and directions table on your Allegro Hand Wiki page (front page - scroll down): Allegro_Hand_DML_Info
 
